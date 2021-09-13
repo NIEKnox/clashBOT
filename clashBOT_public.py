@@ -64,11 +64,11 @@ print("Starting bot")
 
 
 @bot.event
-async def on_ready():  #
-    print("on_ready just happened!")
-    activity = discord.Activity(name='The CLASH!', type=discord.ActivityType.watching)
-    await bot.change_presence(activity=activity)
-    channel_ba = bot.get_channel(bot_actions)
+async def on_ready():  # do this when bot goes live
+    print("on_ready just happened!")  # print statement
+    activity = discord.Activity(name='The CLASH!', type=discord.ActivityType.watching)  # activity statement
+    await bot.change_presence(activity=activity)  # change bot activity
+    channel_ba = bot.get_channel(bot_actions)  # get bot actions channel
     await channel_ba.send("CLASHBOT is now live!")  # tells bot actions channel that bot is live
 
 
